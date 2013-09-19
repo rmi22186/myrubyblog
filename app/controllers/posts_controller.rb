@@ -1,7 +1,11 @@
 class PostsController < ApplicationController
 	def index
-		@content_first = "This is a sample post"
-		@content_second = "This is a sample post"
+		@posts = Post.all
+	end
+
+	def show
+		@post = Post.find(params[:id])
+
 	end
 
 	def new
@@ -17,10 +21,6 @@ class PostsController < ApplicationController
 	end
 
 	def update
-
-	end
-
-	def show
 
 	end
 
